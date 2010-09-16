@@ -1,0 +1,148 @@
+<html>
+<head>
+<link rel="commands" href="tableparser.js" name="tableparser" />
+<script>
+function show()
+{document.getElementById('film').style.display='block';
+}
+
+
+</script>
+<!--analytics-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9009347-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script>
+ 
+      function toggle(el){var m=0;
+                        if( document.getElementById(el).style.display=='block')
+                        {document.getElementById(el).style.display='none'; m=1;}
+                        if( document.getElementById(el).style.display=='none'&&m==0)
+                        {document.getElementById(el).style.display='block';}
+                       }
+      
+      function fillform(text)
+      {var x=document.getElementById("query");  //alert(x.innerHTML);
+       x.value=text;
+            
+      }
+      
+    </script> 
+</head>
+<body style="position:relative; left:50;">a tool to convert a html table into a workable list of semicolon-seperated values
+<p></p>
+<p></p>it can be used as a 
+<a href="javascript:
+void ((function(){
+    if (typeof(jQuery) != 'function') {
+        var noeud_js = document.createElement('script');
+        noeud_js.setAttribute('src', 'http://code.jquery.com/jquery-latest.pack.js');
+        document.getElementsByTagName('head')[0].appendChild(noeud_js);
+    }
+   
+    function verif_loaded(){
+        if (typeof(jQuery) == 'function') {
+            clearInterval(interval);
+            code();
+        }
+    }
+   
+    var interval = window.setInterval(verif_loaded, 100);
+   
+    function code(){
+
+  $('table')
+ .mouseover(function() {
+   $(this).css('outline',' 1px solid #c50');
+ })
+ .mouseout(function() {
+   $(this).css('outline',' 0px solid #c50');
+ });
+
+var all='';
+ $('table').click(function() {
+$('tr', this).each(function(){
+var row=$(this);
+  $('td',row).each(function(){
+  all+=$(this).html() + '; ';
+  });
+
+  all+='<br/>';
+});
+
+$('*').html(all);
+});
+
+    
+    }
+})())">bookmarklet</a>, or ubiquity extension</br>
+
+ <b>In ubiquity, type: <i>parse table</i> </b> - then select which table you want to parse<p></p>
+<a href="tableparser.js">View source</a></span>
+  
+  heres the bookmarklet source - <pre style="font-size:80%;">javascript:
+void ((function(){
+    if (typeof(jQuery) != 'function') {
+        var noeud_js = document.createElement('script');
+        noeud_js.setAttribute('src', 'http://code.jquery.com/jquery-latest.pack.js');
+        document.getElementsByTagName('head')[0].appendChild(noeud_js);
+    }
+   
+    function verif_loaded(){
+        if (typeof(jQuery) == 'function') {
+            clearInterval(interval);
+            code();
+        }
+    }
+   
+    var interval = window.setInterval(verif_loaded, 100);  
+     
+    function code(){
+  $('table')
+ .mouseover(function() {
+   $(this).css('outline',' 1px solid #c50');
+ })
+ .mouseout(function() {
+   $(this).css('outline',' 0px solid #c50');
+ });
+
+var all='';
+ $('table').click(function() {
+$('tr', this).each(function(){
+var row=$(this);
+  $('td',row).each(function(){
+  all+=$(this).html() + '; ';
+  });
+
+  all+='<br/>';
+});
+
+$('*').html(all);
+});    
+    }
+})())
+</pre>
+
+  try it with this table - 
+    <table id="sortable_table_id_0" class="wikitable sortable"> <tbody><tr> <th>Article<a href="http://en.wikipedia.org/wiki/Fires_in_Canada#" class="sortheader" ></a></th> <th>Place<a href="http://en.wikipedia.org/wiki/Fires_in_Canada#" class="sortheader" ></a></th> <th>Year<a href="http://en.wikipedia.org/wiki/Fires_in_Canada#" class="sortheader" ></a></th> <th>Deaths<a href="http://en.wikipedia.org/wiki/Fires_in_Canada#" class="sortheader" ></a></th> <th>Damage<a href="http://en.wikipedia.org/wiki/Fires_in_Canada#" class="sortheader" ></a></th> </tr> <tr> <td><a href="http://en.wikipedia.org/wiki/Great_Fire_of_1892" title="Great Fire of 1892">Great Fire of 1892</a></td> <td><a href="http://en.wikipedia.org/wiki/St._John%27s,_Newfoundland" title="St. John's, Newfoundland" class="mw-redirect">St. John's, Newfoundland</a></td> <td>1892</td> <td></td> <td>$13,000,000</td> </tr> <tr> <td><a href="http://en.wikipedia.org/wiki/1900_Hull-Ottawa_fire" title="1900 Hull-Ottawa fire" class="mw-redirect">1900 Hull-Ottawa fire</a></td> <td><a href="http://en.wikipedia.org/wiki/Hull,_Quebec" title="Hull, Quebec">Hull, Quebec</a></td> <td>1900</td> <td>7</td> <td></td> </tr> <tr> <td><a href="http://en.wikipedia.org/wiki/The_Great_Fire_of_Saint_John,_New_Brunswick" title="The Great Fire of Saint John, New Brunswick">The Great Fire of Saint John, New Brunswick</a></td> <td><a href="http://en.wikipedia.org/wiki/St_John,_New_Brunswick" title="St John, New Brunswick" class="mw-redirect">St John, New Brunswick</a></td> <td>1877</td> <td>19</td> <td>$28,000,000<sup id="cite_ref-0" class="reference"><a href="http://en.wikipedia.org/wiki/Fires_in_Canada#cite_note-0"><span>[</span>1<span>]</span></a></sup></td> <td></td> </tr> <tr> <td><a href="http://en.wikipedia.org/wiki/Great_Vancouver_Fire" title="Great Vancouver Fire">Great Vancouver Fire</a></td> <td><a href="http://en.wikipedia.org/wiki/Vancouver,_B.C." title="Vancouver, B.C." class="mw-redirect">Vancouver, B.C.</a></td> <td>1886</td> <td></td> <td>$1,300,000</td> <td></td> </tr> <tr> <td><a href="http://en.wikipedia.org/wiki/Calgary_Fire_of_1886" title="Calgary Fire of 1886">Calgary Fire of 1886</a></td> <td><a href="http://en.wikipedia.org/wiki/Calgary" title="Calgary">Calgary</a></td> <td>1886</td> <td>0</td> <td>$103,200</td> </tr> <tr> <td><a href="http://en.wikipedia.org/wiki/Great_Toronto_Fire" title="Great Toronto Fire">Great Toronto Fire</a></td> <td><a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a></td> <td>1904</td> <td>0</td> <td>$10,350,000</td> </tr> <tr> <td><a href="http://en.wikipedia.org/wiki/Matheson_Fire" title="Matheson Fire">Matheson Fire</a></td> <td><a href="http://en.wikipedia.org/wiki/Black_River-Matheson" title="Black River-Matheson" class="mw-redirect">Black River-Matheson</a></td> <td>1916</td> <td>223<sup id="cite_ref-1" class="reference"><a href="http://en.wikipedia.org/wiki/Fires_in_Canada#cite_note-1"><span>[</span>2<span>]</span></a></sup></td> <td></td> </tr> <tr> <td><a href="http://en.wikipedia.org/wiki/Great_Fire_of_1922" title="Great Fire of 1922">Great Fire of 1922</a></td> <td><a href="http://en.wikipedia.org/wiki/Timiskaming_District,_Ontario" title="Timiskaming District, Ontario">Timiskaming District, Ontario</a></td> <td>1922</td> <td>43</td> <td>2,000,000</td></tr></tbody></table>
+
+<p></p>
+<a href="list.html">my other commands</a>
+<hr/>
+<span style="position:relative; left:50; color:grey;">
+<a onClick="show()" href="#" >Whats Ubiquity?</a> - <a href="http://ubiquity.mozilla.com/">Install it</a> 
+<p></p>
+<span id="film" style="display:none;">
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/knNS-5em7xU&hl=en_US&fs=1&color1=0x2b405b&color2=0x6b8ab6"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/knNS-5em7xU&hl=en_US&fs=1&color1=0x2b405b&color2=0x6b8ab6" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+</span>
+<p></p>
+</span>
+
